@@ -1,0 +1,46 @@
+﻿@page
+@model SportsClub.Pages.Register.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Member</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.Contact)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.Contact)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.Plan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.Plan)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Member.id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
